@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student page</title>
+
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+</head>
+<body>
+    <div class="homeicon">
+        <a href="http://localhost/senarathne/" >Home</a> </div> 
+    <form action="php/student.php" method="POST" onsubmit="return(valid())" >
+        <div class="b1 outline"><table>
+
+            <caption>Student Data</caption>
+            <tr>
+                <td><label for="">Registration Number</label><td>:</td>
+                <td><input type="text"name="rno"id="rno" required/></td>
+            </tr>
+            <tr>
+                <td><label for="">Username</label><td>:</td>
+                <td><input type="text"name="uname"id="uname" placeholder="Senarathne"required/></td>
+            </tr>
+            <tr>
+                <td><label for="">Address</label><td>:</td>
+                <td><textarea name="adr"id="adr"required></textarea></td>
+            </tr>
+            <tr>
+                <td><label for="">Gender</label><td>:</td></td>
+                <td>
+                    <input type="radio" name="gen" id="gen" value="M">Male 
+                    <input type="radio" name="gen" id="gen" value="F">Female
+                </td>
+            </tr>
+            <tr>
+                <td><label for="">Telephone*</label><td>:</td>
+                <td><input type="text" name="tep"id="tep" size="10"required></textarea></td>
+            </tr>
+
+            <tr>
+                <td><input type="submit" name="sub"value="Submit" onclick=""/></td><td>&nbsp;</td>
+                <td><a href="search.html">Search Student</a></td>
+            </tr>
+        </table></div>
+    </form>
+</body>
+</html>
