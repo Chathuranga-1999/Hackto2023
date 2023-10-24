@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Student</title>
+    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <script src="js/search.js" ></script>
+</head>
+<body>
+    <div class="homeicon">
+        <a href="http://localhost/senarathne/" >Home</a> </div> 
+    <form action="php/search.php" method="post" onsubmit="return(valid())" >
+        <table>
+            <caption>Search Student</caption>
+            <tr>
+                <td><input type="text" name="sdata"id="sdata"required></td> 
+                <td><select id="sch" name="sch">
+                    <option value="Registration no"selected>Reg No.</option>
+                    <option value="Name">Name</option>
+                    <option value="Address">Address</option>
+                </select></td>
+                <td><input type="submit" value="Search" ></td> 
+                <td><a href="student.html">Student Data</a></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
