@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 60%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#myForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#myInput {
+  width: 100%;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#myButton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#myButton:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Simple To-Do List</h2>
+  <form id="myForm">
+    <input type="text" id="myInput" placeholder="Add a new task">
+    <button type="button" id="myButton" onclick="addItem()">Add</button>
+  </form>
+  <ul id="myList"></ul>
+</div>
+
+<script>
+// JavaScript
+function addItem() {
+  var inputVal = document.getElementById("myInput").value;
+  if (inputVal !== "") {
+    var node = document.createElement("LI");
+    var textnode = document.createTextNode(inputVal);
+    node.appendChild(textnode);
+    document.getElementById("myList").appendChild(node);
+    document.getElementById("myInput").value = "";
+  }
+}
+</script>
+
+</body>
+</html>
