@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+#colorText {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#colorButton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#colorButton:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="colorText">Click the button to change the background color!</div>
+  <button id="colorButton" onclick="changeColor()">Change Color</button>
+</div>
+
+<script>
+// JavaScript
+function changeColor() {
+  var colors = ['#ff9999', '#99ff99', '#9999ff', '#ffff99', '#99ffff', '#ff99ff'];
+  var randomColor = colors[Math.floor(Math.random() * colors.length)];
+  document.body.style.backgroundColor = randomColor;
+}
+</script>
+
+</body>
+</html>
