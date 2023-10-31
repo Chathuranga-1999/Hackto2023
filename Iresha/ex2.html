@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 50%;
+  margin: 50px auto;
+  text-align: center;
+}
+
+#myInput {
+  width: 60%;
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#myButton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#myButton:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Simple Form</h2>
+  <input type="text" id="myInput" placeholder="Enter your name">
+  <br>
+  <button id="myButton" onclick="myFunction()">Submit</button>
+  <p id="result"></p>
+</div>
+
+<script>
+// JavaScript
+function myFunction() {
+  var inputVal = document.getElementById("myInput").value;
+  document.getElementById("result").innerHTML = "Hello, " + inputVal + "!";
+}
+</script>
+
+</body>
+</html>
