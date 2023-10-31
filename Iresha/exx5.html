@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+#imageContainer {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#randomImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="imageContainer">
+    <img id="randomImage" src="" alt="Random Image">
+  </div>
+  <br>
+  <button onclick="getRandomImage()">Get Random Image</button>
+</div>
+
+<script>
+// JavaScript
+var images = [
+  "https://via.placeholder.com/300",
+  "https://via.placeholder.com/300/0000FF/808080",
+  "https://via.placeholder.com/300/FF0000/FFFFFF",
+  "https://via.placeholder.com/300/FFFF00/000000",
+  "https://via.placeholder.com/300/008000/FFFFFF"
+];
+
+function getRandomImage() {
+  var randomIndex = Math.floor(Math.random() * images.length);
+  var randomImageUrl = images[randomIndex];
+  document.getElementById("randomImage").src = randomImageUrl;
+}
+</script>
+
+</body>
+</html>
