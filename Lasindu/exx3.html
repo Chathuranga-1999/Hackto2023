@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+#quote {
+  font-size: 24px;
+  font-style: italic;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#quoteAuthor {
+  font-size: 18px;
+  color: #777;
+}
+
+#quoteButton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#quoteButton:hover {
+  background-color: #45a049;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="quote">"The only way to do great work is to love what you do."</div>
+  <div id="quoteAuthor">- Steve Jobs</div>
+  <button id="quoteButton" onclick="generateQuote()">Generate New Quote</button>
+</div>
+
+<script>
+// JavaScript
+var quotes = [
+  {
+    quote: "The only way to do great work is to love what you do.",
+    author: "Steve Jobs"
+  },
+  {
+    quote: "Strive not to be a success, but rather to be of value.",
+    author: "Albert Einstein"
+  },
+  {
+    quote: "The best way to predict the future is to invent it.",
+    author: "Alan Kay"
+  },
+  {
+    quote: "Life is 10% what happens to us and 90% how we react to it.",
+    author: "Charles R. Swindoll"
+  },
+  {
+    quote: "Believe you can and you're halfway there.",
+    author: "Theodore Roosevelt"
+  }
+];
+
+function generateQuote() {
+  var randomIndex = Math.floor(Math.random() * quotes.length);
+  document.getElementById("quote").innerHTML = '"' + quotes[randomIndex].quote + '"';
+  document.getElementById("quoteAuthor").innerHTML = "- " + quotes[randomIndex].author;
+}
+</script>
+
+</body>
+</html>
