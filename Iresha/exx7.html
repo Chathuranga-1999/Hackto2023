@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+#textInput {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+#textButton {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#textButton:hover {
+  background-color: #45a049;
+}
+
+#outputText {
+  font-size: 20px;
+  color: #333;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <input type="text" id="textInput" placeholder="Enter some text">
+  <br>
+  <button id="textButton" onclick="displayText()">Display Text</button>
+  <p id="outputText"></p>
+</div>
+
+<script>
+// JavaScript
+function displayText() {
+  var inputText = document.getElementById("textInput").value;
+  document.getElementById("outputText").innerText = inputText;
+}
+</script>
+
+</body>
+</html>
