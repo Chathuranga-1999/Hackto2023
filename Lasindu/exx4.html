@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* CSS */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+}
+
+#clock {
+  font-size: 48px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="clock">12:00:00</div>
+</div>
+
+<script>
+// JavaScript
+function updateClock() {
+  var currentTime = new Date();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  var seconds = currentTime.getSeconds();
+
+  hours = (hours < 10 ? "0" : "") + hours;
+  minutes = (minutes < 10 ? "0" : "") + minutes;
+  seconds = (seconds < 10 ? "0" : "") + seconds;
+
+  var timeString = hours + ":" + minutes + ":" + seconds;
+  document.getElementById("clock").innerHTML = timeString;
+}
+
+setInterval(updateClock, 1000); // Update the clock every second
+</script>
+
+</body>
+</html>
